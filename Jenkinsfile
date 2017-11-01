@@ -1,7 +1,7 @@
 node {
     try {
         stage('Preparation') {
-            git credentialsId: '270b889b-fbdc-4ff9-978f-48a39f0e296d', url: 'git@github.com:papitoio/nblog-web.git'         
+            git credentialsId: 'b9f01ce4-557f-4bbc-89e2-6399a7a60617', url: 'git@github.com:erickiwamoto/nblog-web.git'        
         }
         stage('Deploy to QA') {
             echo 'heroku deploy'
@@ -43,7 +43,7 @@ def deploy(String env) {
 
 def deploy_prod() {
     sh 'rm -rf .git && git init'
-    sh "heroku git:remote -a nblog-web"
+    sh "heroku git:remote -a nblog-web-erick"
     sh "git add . && git commit -m 'deploy'"
     sh "git push heroku master --force"
 }
