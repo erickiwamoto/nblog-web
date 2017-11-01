@@ -36,7 +36,7 @@ node {
 
 def deploy(String env) {
     sh 'rm -rf .git && git init'
-    sh "heroku git:remote -a nblog-web-${env}"
+    sh "heroku git:remote -a nblog-web-${env}-erick"
     sh "git add . && git commit -m 'deploy'"
     sh "git push heroku master --force"
 }
