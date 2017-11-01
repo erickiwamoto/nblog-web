@@ -24,5 +24,4 @@ Capybara.configure do |config|
   config.app_host = $data['url'][$env]
 end
 
-
 Capybara.default_max_wait_time = 5

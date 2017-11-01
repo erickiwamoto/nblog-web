@@ -1,5 +1,4 @@
 
-
 After do |scenario|
   filename = scenario.name.tr(' ', '_')
 
